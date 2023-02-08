@@ -1,6 +1,5 @@
 {
     "name": "iseensky/slim-education",
-    "type": "project",
     "autoload": {
         "psr-4": {
             "Iseensky\\SlimEducation\\": "src/"
@@ -12,5 +11,15 @@
             "email": "yasen20008@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "slim/slim": "^4.11",
+        "slim/psr7": "^1.6",
+        "slim/http": "^1.3",
+        "slim/php-view": "^3.2",
+        "php-di/php-di": "^7.0",
+        "fakerphp/faker": "^1.21",
+        "symfony/string": "^6.2",
+        "tightenco/collect": "^9.47",
+        "slim/flash": "^0.4.0"
+    }
 }

@@ -1,0 +1,20 @@
+<?php foreach ($flash as $messages): ?>
+  <?php foreach ($messages as $message): ?>
+  <div>
+    <?= htmlspecialchars($message) ?>
+  </div>
+  <?php endforeach ?>
+<?php endforeach ?>
+
+<table>
+    <?php foreach ($user as $key => $value): ?>
+      <tr>
+        <td><?= htmlspecialchars($key) ?></td>
+        <td><?= htmlspecialchars($value) ?></td>
+      </tr>
+    <?php endforeach; ?>
+</table>
+<form action="/users/<?= $user['id'] ?>" method="post">
+  <input type="hidden" name="_METHOD" value="DELETE">
+  <input type="submit" value="Remove">
+</form>

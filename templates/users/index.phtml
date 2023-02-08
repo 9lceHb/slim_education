@@ -1,0 +1,18 @@
+<?php foreach ($flash as $messages): ?>
+  <?php foreach ($messages as $message): ?>
+  <div>
+    <?= htmlspecialchars($message) ?>
+  </div>
+  <?php endforeach ?>
+<?php endforeach ?>
+
+<form action="/users">
+  <input type="search" name="term" value="<?= $term ?>">
+  <input type="submit" value="Search">
+</form>
+
+<?php foreach ($users as $user): ?>
+  <div>
+    <a href = "users/<?= htmlspecialchars($user['id']) ?>"><?= htmlspecialchars($user['firstName']) ?></a>
+  </div>
+<?php endforeach ?>
